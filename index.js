@@ -1,6 +1,50 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
 
+// ----- Table of Contents ----- //
+
+let createReadMe = (username, title, description, installation, useage, command, command2, credit, license) => {
+    return `
+# Title : ${title}
+
+# Table of Contents
+
+* Description
+* Installation
+* Useage
+* Test
+* License
+
+## GitURL:
+
+github.com/${username}
+
+## Description :
+
+${description}
+
+## Installation :
+
+${installation}
+
+## Useage :
+
+${usage}
+
+## Credit :
+
+${credit}
+
+## Test :
+
+Commands needed to run for tests and dependencies.
+
+Dependencies: ${command} , Tests: ${command2}
+
+## License
+${license}`;
+}
+
 
 // ----- Questions ----- //
 
