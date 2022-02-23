@@ -17,6 +17,7 @@ Table of Contents
 * [Installation](#installation)
 * [Dependencies](#dependencies)
 * [Useage](#useage)
+* [Credit] (#credit)
 * [Test](#test)
 * [License](#license)
 
