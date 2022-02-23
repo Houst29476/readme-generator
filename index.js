@@ -7,13 +7,15 @@ let createReadMe = (title, username, email, description, installation, useage, c
     return `
 # Title : ${title}
 
-# Table of Contents
+Table of Contents
+=================
 
-* Description
-* Installation
-* Useage
-* Test
-* License
+* [Description](#description)
+* [Installation](#installation)
+* [Useage](#useage)
+* [Dependencies](#command)
+* [Test](#command2)
+* [License](#license)
 
 ## GitURL:
 
