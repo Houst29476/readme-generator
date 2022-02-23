@@ -3,7 +3,7 @@ const fs = require('fs');
 
 // ----- Table of Contents ----- //
 
-let createReadMe = (title, username, email, description, installation, useage, command, command2, credit, license) => {
+let createReadMe = (title, username, email, description, installation, useage, dependencies, test, credit, license) => {
     return `
 # Title : ${title}
 
@@ -33,6 +33,10 @@ ${description}
 
 ${installation}
 
+## Dependencies : 
+
+${dependencies}
+
 ## Useage :
 
 ${useage}
@@ -43,9 +47,7 @@ ${credit}
 
 ## Test :
 
-Commands needed to run for tests and dependencies.
-
-Dependencies: ${command} , Tests: ${command2}
+${test}
 
 ## License
 ${license}`;
@@ -135,11 +137,11 @@ var questions = [
     },
     {
         type: 'input',
-        name: 'command',
+        name: 'dependencies',
         message: '(7) Enter what commands should be used to install dependencies? (Required)',
         default: "npm i", 
-        validate: commandInput => {
-        if (commandInput) {
+        validate: dependenciesInput => {
+        if (dependenciesInput) {
             return true;
           } else {
             console.log('Please enter a command to insall dependencies!');
@@ -149,11 +151,11 @@ var questions = [
     },
     {
         type: 'input',
-        name: 'command2',
+        name: 'test',
         message: "(8) What command should be used to run tests?",
         default: "npm test",
-        validate: command2Input => {
-          if (command2Input) {
+        validate: testInput => {
+          if (testInput) {
             return true;
           } else {
             console.log('Please enter command to run tests!');
@@ -189,9 +191,9 @@ inquirer
     .prompt (questions)
     .then (answers => {
 
-        const { title, username, email, description, installation, useage, command, command2, credit, license } = answers;
+        const { title, username, email, description, installation, useage, dependencies, test, credit, license } = answers;
 
-        const template = createReadMe(title, username, email, description, installation, useage, command, command2, credit, license);
+        const template = createReadMe(title, username, email, description, installation, useage, dependencies, test, credit, license);
 
         // --- Function to write README file --- //
         fs.writeFile('README.md', template,
