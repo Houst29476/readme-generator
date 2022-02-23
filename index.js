@@ -3,7 +3,7 @@ const fs = require('fs');
 
 // ----- Table of Contents ----- //
 
-let createReadMe = (username, title, description, installation, useage, command, command2, credit, license) => {
+let createReadMe = (title, username, email, description, installation, useage, command, command2, credit, license) => {
     return `
 # Title : ${title}
 
@@ -18,6 +18,10 @@ let createReadMe = (username, title, description, installation, useage, command,
 ## GitURL:
 
 github.com/${username}
+
+## Email Address:
+
+${email}
 
 ## Description :
 
@@ -52,7 +56,7 @@ var questions = [
     {
         type: 'input',
         name: 'username',
-        message: 'Enter your GitHub username (Required)',
+        message: '(1) Enter your GitHub username (Required)',
         validate: githubInput => {
           if (githubInput) {
             return true;
@@ -63,9 +67,22 @@ var questions = [
         }
     },
     {
+      type: 'input',
+      name: 'email',
+      message: '(2) Enter your email address (Required)',
+      validate: emailInput => {
+        if (emailInput) {
+          return true;
+        } else {
+          console.log('Please enter your email address!');
+          return false;
+        }
+      }
+  },
+    {
         type: 'input',
         name: 'title',
-        message: 'Enter the name of your project (Required)',
+        message: '(3) Enter the name of your project (Required)',
         validate: nameInput => {
           if (nameInput) {
             return true;
@@ -78,7 +95,7 @@ var questions = [
     {
         type: 'input',
         name: 'description',
-        message: 'Please enter a short description of your project (Required)',
+        message: '(4) Please enter a short description of your project (Required)',
         validate: descriptionInput => {
           if (descriptionInput) {
             return true;
@@ -91,7 +108,7 @@ var questions = [
     {
         type: 'input',
         name: 'installation',
-        message: 'What does the user need to know about installing the repo? (Required)',
+        message: '(5) What does the user need to know about installing the repo? (Required)',
         validate: installationInput => {
           if (installationInput) {
             return true;
@@ -104,7 +121,7 @@ var questions = [
     {
         type: 'input',
         name: 'usage',
-        message: 'Explain how to use the site or application once installed. (Required)',
+        message: '(6) Explain how to use the site or application once installed. (Required)',
         validate: useageInput => {
           if (useageInput) {
             return true;
@@ -117,7 +134,7 @@ var questions = [
     {
         type: 'input',
         name: 'command',
-        message: 'Enter what commands should be used to install dependencies? (Required)',
+        message: '(7) Enter what commands should be used to install dependencies? (Required)',
         default: "npm i", 
         validate: commandInput => {
         if (commandInput) {
@@ -131,7 +148,7 @@ var questions = [
     {
         type: 'input',
         name: 'command2',
-        message: "What command should be used to run tests?",
+        message: "(8) What command should be used to run tests?",
         default: "npm test",
         validate: command2Input => {
           if (command2Input) {
@@ -145,7 +162,7 @@ var questions = [
     {
         type: 'checkbox',
         name: 'credit',
-        message: 'Select who should get credit for contribution to this project? (Check all that apply)',
+        message: '(9) Select who should get credit for contribution to this project? (Check all that apply)',
         choices: ['Google', 'YouTube', 'Coworker', 'Class Mate', 'Tutor', 'Other'],
         validate: creditInput => {
           if (creditInput) {
@@ -159,7 +176,7 @@ var questions = [
     {
         type: 'checkbox',
         name: 'license',
-        message: 'What type of license applies your project? (Check all that apply)',
+        message: '(10) What type of license applies your project? (Check all that apply)',
         choices: ['Apache 2.0 License', 'Boost Software License 1.0', 'Eclipse Public License 1.0', 'GNU GPL v3', 'The MIT License', 'Mozilla Public License 2.0'],
     },
 ];
@@ -170,9 +187,9 @@ inquirer
     .prompt (questions)
     .then (answers => {
 
-        const { username, title, description, installation, useage, command, command2, credit, license } = answers;
+        const { title, username, email, description, installation, useage, command, command2, credit, license } = answers;
 
-        const template = createReadMe(username, title, description, installation, useage, command, command2, credit, license);
+        const template = createReadMe(title, username, email, description, installation, useage, command, command2, credit, license);
 
         // --- Function to write README file --- //
         fs.writeFile('README.md', template,

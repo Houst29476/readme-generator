@@ -1,5 +1,5 @@
 
-# Title : Readme Generator
+# Title : README Generator
 
 # Table of Contents
 
@@ -13,9 +13,13 @@
 
 github.com/Houst29476
 
+## Email Address:
+
+bradley.boyd@gmail.com
+
 ## Description :
 
-README Generator is an application that fills out and builds a readme file based on answering specific questions a
+README Generator is an application that fills out and builds a readme file based on answering specific questions
 
 ## Installation :
 
