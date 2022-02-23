@@ -65,7 +65,7 @@ var questions = [
     {
         type: 'input',
         name: 'username',
-        message: '(1) Enter your GitHub username (Required)',
+        message: '(1) Enter your GitHub username:',
         validate: usernameInput => {
           if (usernameInput) {
             return true;
@@ -78,7 +78,7 @@ var questions = [
     {
       type: 'input',
       name: 'email',
-      message: '(2) Enter your email address (Required)',
+      message: '(2) Enter your email address:',
       validate: emailInput => {
         if (emailInput) {
           return true;
@@ -91,7 +91,7 @@ var questions = [
     {
         type: 'input',
         name: 'title',
-        message: '(3) Enter the name of your project (Required)',
+        message: '(3) Enter the name of your project:',
         validate: nameInput => {
           if (nameInput) {
             return true;
@@ -104,7 +104,7 @@ var questions = [
     {
         type: 'input',
         name: 'description',
-        message: '(4) Please enter a short description of your project (Required)',
+        message: '(4) Please enter a short description of your project:',
         validate: descriptionInput => {
           if (descriptionInput) {
             return true;
@@ -117,13 +117,13 @@ var questions = [
     {
         type: 'input',
         name: 'installation',
-        message: '(5) How to install the application repo? (Required)',
+        message: '(5) How to install the application repo?',
         default: "git clone https://github.com/houst29476/repo name.git",
         validate: installationInput => {
           if (installationInput) {
             return true;
           } else {
-            console.log('Please enter any project installation instructions!');
+            console.log('Please enter project GitHub Repo link!');
             return false;
           }
         }
@@ -131,7 +131,7 @@ var questions = [
     {
       type: 'input',
       name: 'dependencies',
-      message: '(6) Enter what commands should be used to install dependencies? (Required)',
+      message: '(6) Enter what commands should be used to install dependencies?',
       default: "npm i", 
       validate: dependenciesInput => {
       if (dependenciesInput) {
@@ -145,7 +145,7 @@ var questions = [
     {
         type: 'input',
         name: 'useage',
-        message: '(7) Explain how to use the site or application once installed. (Required)',
+        message: '(7) Explain how to use the site or application once installed:',
         validate: useageInput => {
           if (useageInput) {
             return true;
@@ -172,7 +172,7 @@ var questions = [
     {
         type: 'input',
         name: 'credit',
-        message: '(9) Identify who contributed to this project? (Required)',
+        message: '(9) Identify who contributed to this project:',
         default: "Bradley Boyd",
         validate: creditInput => {
           if (creditInput) {
