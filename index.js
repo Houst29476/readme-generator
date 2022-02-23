@@ -12,9 +12,9 @@ Table of Contents
 
 * [Description](#description)
 * [Installation](#installation)
+* [Dependencies](#dependencies)
 * [Useage](#useage)
-* [Dependencies](#command)
-* [Test](#command2)
+* [Test](#test)
 * [License](#license)
 
 ## GitURL:
@@ -123,6 +123,20 @@ var questions = [
         }
     },
     {
+      type: 'input',
+      name: 'dependencies',
+      message: '(7) Enter what commands should be used to install dependencies? (Required)',
+      default: "npm i", 
+      validate: dependenciesInput => {
+      if (dependenciesInput) {
+          return true;
+        } else {
+          console.log('Please enter a command to insall dependencies!');
+          return false;
+        }
+      }
+    },
+    {
         type: 'input',
         name: 'usage',
         message: '(6) Explain how to use the site or application once installed. (Required)',
@@ -131,20 +145,6 @@ var questions = [
             return true;
           } else {
             console.log('Please enter an overview of how to use the application!');
-            return false;
-          }
-        }
-    },
-    {
-        type: 'input',
-        name: 'dependencies',
-        message: '(7) Enter what commands should be used to install dependencies? (Required)',
-        default: "npm i", 
-        validate: dependenciesInput => {
-        if (dependenciesInput) {
-            return true;
-          } else {
-            console.log('Please enter a command to insall dependencies!');
             return false;
           }
         }
@@ -191,9 +191,9 @@ inquirer
     .prompt (questions)
     .then (answers => {
 
-        const { title, username, email, description, installation, useage, dependencies, test, credit, license } = answers;
+        const { title, username, email, description, installation, dependencies, useage, test, credit, license } = answers;
 
-        const template = createReadMe(title, username, email, description, installation, useage, dependencies, test, credit, license);
+        const template = createReadMe(title, username, email, description, installation, dependencies, useage,  test, credit, license);
 
         // --- Function to write README file --- //
         fs.writeFile('README.md', template,
