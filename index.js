@@ -17,7 +17,7 @@ Table of Contents
 * [Test](#test)
 * [License](#license)
 
-## GitURL:
+## GitHub Profile:
 
 github.com/${username}
 
@@ -60,8 +60,8 @@ var questions = [
         type: 'input',
         name: 'username',
         message: '(1) Enter your GitHub username (Required)',
-        validate: githubInput => {
-          if (githubInput) {
+        validate: usernameInput => {
+          if (usernameInput) {
             return true;
           } else {
             console.log('Please enter your GitHub username!');
