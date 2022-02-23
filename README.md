@@ -1,5 +1,5 @@
 
-# Title : README Generator
+    ![](/readme-generator.jpg)
 
 Table of Contents
 =================
@@ -11,17 +11,17 @@ Table of Contents
 * [Test](#test)
 * [License](#license)
 
-## GitURL:
+## GitHub Profile:
 
-github.com/Houst29476
+https://github.com/Houst29476
 
 ## Email Address:
 
-Bradley.Boyd@gmail.com
+bradley.boyd
 
 ## Description :
 
-README Generator is an application that will build a README file based on the answers of 10 questions
+This application will help you build out a README file by answering the questions
 
 ## Installation :
 
@@ -29,11 +29,11 @@ git clone https://github.com/houst29476/readme-generator.git
 
 ## Dependencies : 
 
-undefined
+npm i
 
 ## Useage :
 
-npm i
+undefined
 
 ## Credit :
 
@@ -44,4 +44,5 @@ Bradley Boyd
 npm test
 
 ## License
+
 The MIT License
