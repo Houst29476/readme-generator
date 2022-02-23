@@ -3,7 +3,7 @@ const fs = require('fs');
 
 // ----- Table of Contents ----- //
 
-let createReadMe = (title, username, email, description, installation, dependencies, useage, test, credit, license) => {
+let createReadMe = (username, email, description, installation, dependencies, useage, test, credit, license) => {
     return `
 
 // ---- License Badge ---- //    
@@ -145,7 +145,7 @@ var questions = [
     },
     {
         type: 'input',
-        name: 'usage',
+        name: 'useage',
         message: '(7) Explain how to use the site or application once installed. (Required)',
         validate: useageInput => {
           if (useageInput) {
@@ -198,9 +198,9 @@ inquirer
     .prompt (questions)
     .then (answers => {
 
-        const { title, username, email, description, installation, dependencies, useage, test, credit, license } = answers;
+        const { username, email, description, installation, dependencies, useage, test, credit, license } = answers;
 
-        const template = createReadMe(title, username, email, description, installation, dependencies, useage, test, credit, license);
+        const template = createReadMe(username, email, description, installation, dependencies, useage, test, credit, license);
 
         // --- Function to write README file --- //
         fs.writeFile('README.md', template,

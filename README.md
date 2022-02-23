@@ -1,5 +1,9 @@
 
 
+// ---- License Badge ---- //    
+[![GitHub license](https://img.shields.io/github/license/Houst29476/readme-generator)](https://github.com/Houst29476/readme-generator)
+
+// ---- Banner ---- //
 ![readme-generator](https://user-images.githubusercontent.com/95327275/155397868-c1f698ee-2061-4502-97a2-5df3df8c5e60.png)
 
 Table of Contents
@@ -22,7 +26,7 @@ bradley.boyd@gmail.com
 
 ## Description :
 
-This application will help you build out a README file by answering the questions
+Readme Generator builds out a completed readme file based on the answers to the questions in the application
 
 ## Installation :
 
@@ -44,6 +48,7 @@ Bradley Boyd
 
 npm test
 
-## License
+## License :
 
 The MIT License
+
