@@ -187,7 +187,7 @@ var questions = [
         type: 'checkbox',
         name: 'license',
         message: '(10) What type of license applies your project? (Check all that apply)',
-        choices: ['Apache 2.0 License', 'Boost Software License 1.0', 'Eclipse Public License 1.0', 'GNU GPL v3', 'The MIT License', 'Mozilla Public License 2.0'],
+        choices: ['Apache 2.0 License', 'Boost Software License 1.0', 'Eclipse Public License 1.0', 'GNU GPL v3', 'MIT License', 'Mozilla Public License 2.0'],
     },
 ];
 
