@@ -53,7 +53,6 @@ ${test}
 ${license}`;
 }
 
-
 // ----- Questions ----- //
 
 var questions = [
@@ -112,7 +111,8 @@ var questions = [
     {
         type: 'input',
         name: 'installation',
-        message: '(5) What does the user need to know about installing the repo? (Required)',
+        message: '(5) How to install the application repo? (Required)',
+        default: "git clone https://github.com/houst29476/repo name.git",
         validate: installationInput => {
           if (installationInput) {
             return true;
@@ -125,7 +125,7 @@ var questions = [
     {
       type: 'input',
       name: 'dependencies',
-      message: '(7) Enter what commands should be used to install dependencies? (Required)',
+      message: '(6) Enter what commands should be used to install dependencies? (Required)',
       default: "npm i", 
       validate: dependenciesInput => {
       if (dependenciesInput) {
@@ -139,7 +139,7 @@ var questions = [
     {
         type: 'input',
         name: 'usage',
-        message: '(6) Explain how to use the site or application once installed. (Required)',
+        message: '(7) Explain how to use the site or application once installed. (Required)',
         validate: useageInput => {
           if (useageInput) {
             return true;
@@ -164,15 +164,15 @@ var questions = [
         } 
     },
     {
-        type: 'checkbox',
+        type: 'input',
         name: 'credit',
-        message: '(9) Select who should get credit for contribution to this project? (Check all that apply)',
-        choices: ['Google', 'YouTube', 'Coworker', 'Class Mate', 'Tutor', 'Other'],
+        message: '(9) Identify who contributed to this project? (Required)',
+        default: "Bradley Boyd",
         validate: creditInput => {
           if (creditInput) {
             return true;
           } else {
-            console.log('Please select contributors to the project!');
+            console.log('Please identify contributors to the project!');
             return false;
           }
         }
