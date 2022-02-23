@@ -3,7 +3,7 @@ const fs = require('fs');
 
 // ----- Table of Contents ----- //
 
-let createReadMe = (title, username, email, description, installation, useage, dependencies, test, credit, license) => {
+let createReadMe = (title, username, email, description, installation, dependencies, useage, test, credit, license) => {
     return `
 # Title : ${title}
 
@@ -193,7 +193,7 @@ inquirer
 
         const { title, username, email, description, installation, dependencies, useage, test, credit, license } = answers;
 
-        const template = createReadMe(title, username, email, description, installation, dependencies, useage,  test, credit, license);
+        const template = createReadMe(title, username, email, description, installation, dependencies, useage, test, credit, license);
 
         // --- Function to write README file --- //
         fs.writeFile('README.md', template,
