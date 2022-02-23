@@ -29,7 +29,7 @@ ${installation}
 
 ## Useage :
 
-${usage}
+${useage}
 
 ## Credit :
 
@@ -104,7 +104,7 @@ var questions = [
     {
         type: 'input',
         name: 'usage',
-        message: 'Explain how to use the site or application works once installed. (Required)',
+        message: 'Explain how to use the site or application once installed. (Required)',
         validate: useageInput => {
           if (useageInput) {
             return true;
@@ -115,15 +115,15 @@ var questions = [
         }
     },
     {
-        type: 'checkbox',
+        type: 'input',
         name: 'command',
-        message: 'Enter what commands should be used to install dependencies? (Check all that apply)',
-        choices: ['npm i', 'npm install'], 
+        message: 'Enter what commands should be used to install dependencies? (Required)',
+        default: "npm i", 
         validate: commandInput => {
         if (commandInput) {
             return true;
           } else {
-            console.log('Please select commands to insall dependencies!');
+            console.log('Please enter a command to insall dependencies!');
             return false;
           }
         }
@@ -146,7 +146,7 @@ var questions = [
         type: 'checkbox',
         name: 'credit',
         message: 'Select who should get credit for contribution to this project? (Check all that apply)',
-        choices: ['Goolge', 'YouTube', 'Coworker', 'Class Mate', 'Tutor', 'Other'],
+        choices: ['Google', 'YouTube', 'Coworker', 'Class Mate', 'Tutor', 'Other'],
         validate: creditInput => {
           if (creditInput) {
             return true;
@@ -161,9 +161,6 @@ var questions = [
         name: 'license',
         message: 'What type of license applies your project? (Check all that apply)',
         choices: ['Apache 2.0 License', 'Boost Software License 1.0', 'Eclipse Public License 1.0', 'GNU GPL v3', 'The MIT License', 'Mozilla Public License 2.0'],
-        filter: function (val) {
-            return val.toLowerCase();
-        }
     },
 ];
 
