@@ -5,7 +5,8 @@ const fs = require('fs');
 
 let createReadMe = (title, username, email, description, installation, dependencies, useage, test, credit, license) => {
     return `
-    ![](.readme-generator.jpg)
+
+![](readme-generator.jpg)
 
 Table of Contents
 =================
