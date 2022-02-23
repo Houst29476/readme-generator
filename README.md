@@ -1,6 +1,6 @@
 
 
-![plot](readme-generator.jpg)
+![readme-generator](https://user-images.githubusercontent.com/95327275/155397868-c1f698ee-2061-4502-97a2-5df3df8c5e60.png)
 
 Table of Contents
 =================
