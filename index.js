@@ -19,7 +19,7 @@ Table of Contents
 
 ## GitHub Profile:
 
-github.com/${username}
+https://github.com/${username}
 
 ## Email Address:
 
@@ -50,6 +50,7 @@ ${credit}
 ${test}
 
 ## License
+
 ${license}`;
 }
 
