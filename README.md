@@ -1,5 +1,6 @@
 
-    ![](/readme-generator.jpg)
+
+![plot](readme-generator.jpg)
 
 Table of Contents
 =================
@@ -17,7 +18,7 @@ https://github.com/Houst29476
 
 ## Email Address:
 
-bradley.boyd
+bradley.boyd@gmail.com
 
 ## Description :
 
