@@ -1,6 +1,6 @@
 
 
-[![GitHub license](https://img.shields.io/github/license/Houst29476/readme-generator)](https://github.com/Houst29476/readme-generator)
+![GitHub license](https://img.shields.io/badge/MIT-license-orange)
 
 ![readme-generator](https://user-images.githubusercontent.com/95327275/155397868-c1f698ee-2061-4502-97a2-5df3df8c5e60.png)
 
@@ -11,7 +11,7 @@ Table of Contents
 * [Installation](#installation)
 * [Dependencies](#dependencies)
 * [Useage](#useage)
-* [Credit] (#credit)
+* [Credit](#credit)
 * [Test](#test)
 * [License](#license)
 
@@ -21,7 +21,7 @@ https://github.com/Houst29476
 
 ## Email Address:
 
-Bradley.Boyd@gmail.com
+bradley.boyd@gmail.copm
 
 ## Description :
 
