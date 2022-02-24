@@ -21,11 +21,11 @@ https://github.com/Houst29476
 
 ## Email Address:
 
-bradley.boyd@gmail.copm
+bradley.boyd@gmail.com
 
 ## Description :
 
-Readme Generator is an application that builds a readme file based on the answers to questions specific to your project
+This application assists a user in building a README file based on the answers of questions regarding a specific project
 
 ## Installation :
 
@@ -37,7 +37,7 @@ npm i
 
 ## Useage :
 
-once the repo is cloned and dependencies have been installed, run the application (node index.js) and answer the questions. A readme file will be generated at the end.
+once the application code is cloned on your machine, and dependencies are installed, answer all the questions regarding your project and a README file will be generated at the end.
 
 ## Credit :
 
