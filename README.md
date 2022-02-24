@@ -4,6 +4,8 @@
 
 ![readme-generator](https://user-images.githubusercontent.com/95327275/155397868-c1f698ee-2061-4502-97a2-5df3df8c5e60.png)
 
+![readme-generator](https://user-images.githubusercontent.com/95327275/155549514-bf245cae-ca1f-4b79-b645-ea4f8262421a.gif)
+
 Table of Contents
 =================
 
@@ -25,7 +27,7 @@ bradley.boyd@gmail.com
 
 ## Description :
 
-This application assists a user in building a README file based on the answers of questions regarding a specific project
+This application generates a README file based off the answers of questions regarding the project
 
 ## Installation :
 
@@ -37,7 +39,7 @@ npm i
 
 ## Useage :
 
-once the application code is cloned on your machine, and dependencies are installed, answer all the questions regarding your project and a README file will be generated at the end.
+once the code is cloned to your machine and dependencies are installed, run the application (node index.js) and answer all of the questions. A README file will be produced at the end.
 
 ## Credit :
 
