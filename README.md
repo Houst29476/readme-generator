@@ -11,6 +11,7 @@ Table of Contents
 * [Installation](#installation)
 * [Dependencies](#dependencies)
 * [Useage](#useage)
+* [Credit] (#credit)
 * [Test](#test)
 * [License](#license)
 
@@ -20,7 +21,7 @@ https://github.com/Houst29476
 
 ## Email Address:
 
-bradley.boyd@gmail.com
+Bradley.Boyd@gmail.com
 
 ## Description :
 
@@ -48,5 +49,5 @@ npm test
 
 ## License :
 
-The MIT License
+MIT License
 
