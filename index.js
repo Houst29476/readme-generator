@@ -10,7 +10,7 @@ let createReadMe = (username, email, description, installation, dependencies, us
 
 ![readme-generator](https://user-images.githubusercontent.com/95327275/155397868-c1f698ee-2061-4502-97a2-5df3df8c5e60.png)
 
-![readme-generator](https://user-images.githubusercontent.com/95327275/155551672-95067b3c-4470-40a8-992e-d698c6155d21.mp4)
+https://user-images.githubusercontent.com/95327275/155551672-95067b3c-4470-40a8-992e-d698c6155d21.mp4
 
 Table of Contents
 =================
