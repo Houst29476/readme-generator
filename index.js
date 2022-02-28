@@ -3,7 +3,7 @@ const fs = require('fs');
 
 // ----- Table of Contents ----- //
 
-let createReadMe = (username, email, description, installation, dependencies, useage, test, credit, license) => {
+let createReadMe = (username, repo, email, description, installation, dependencies, useage, credit, test, questions, license) => {
     return `
 
 ![GitHub license](https://img.shields.io/badge/MIT-license-orange)
@@ -15,17 +15,24 @@ https://user-images.githubusercontent.com/95327275/155551672-95067b3c-4470-40a8-
 Table of Contents
 =================
 
+* [GitHub Profile](#GitHub Profile)
+* [Project Repository URL](#repo)
+* [Email Adress](#email)
 * [Description](#description)
 * [Installation](#installation)
 * [Dependencies](#dependencies)
 * [Useage](#useage)
 * [Credit](#credit)
 * [Test](#test)
+* [Questions](#Questions)
 * [License](#license)
 
 ## GitHub Profile:
 
 https://github.com/${username}
+
+## Project Repository URL:
+${repo}
 
 ## Email Address:
 
@@ -55,6 +62,10 @@ ${credit}
 
 ${test}
 
+## Questions :
+
+${questions}
+
 ## License :
 
 ${license}
@@ -79,8 +90,22 @@ var questions = [
     },
     {
       type: 'input',
+      name: 'repo',
+      message: '(2) Enter the Project Repository URL:',
+      default: "https://github.com/Houst29476/(repo name)",
+      validate: repoInput => {
+        if (repoInput) {
+          return true;
+        } else {
+          console.log('Please enter the project Repo URL!');
+          return false;
+        }
+      }
+    },
+    {
+      type: 'input',
       name: 'email',
-      message: '(2) Enter your email address:',
+      message: '(3) Enter your email address:',
       validate: emailInput => {
         if (emailInput) {
           return true;
@@ -93,7 +118,7 @@ var questions = [
     {
         type: 'input',
         name: 'title',
-        message: '(3) Enter the name of your project:',
+        message: '(4) Enter the name of your project:',
         validate: nameInput => {
           if (nameInput) {
             return true;
@@ -106,7 +131,7 @@ var questions = [
     {
         type: 'input',
         name: 'description',
-        message: '(4) Please enter a short description of your project:',
+        message: '(5) Please enter a short description of your project:',
         validate: descriptionInput => {
           if (descriptionInput) {
             return true;
@@ -119,7 +144,7 @@ var questions = [
     {
         type: 'input',
         name: 'installation',
-        message: '(5) How to install the application repo?',
+        message: '(6) How to install the application repo?',
         default: "git clone https://github.com/houst29476/repo name.git",
         validate: installationInput => {
           if (installationInput) {
@@ -133,7 +158,7 @@ var questions = [
     {
       type: 'input',
       name: 'dependencies',
-      message: '(6) Enter what commands should be used to install dependencies?',
+      message: '(7) Enter what commands should be used to install dependencies?',
       default: "npm i", 
       validate: dependenciesInput => {
       if (dependenciesInput) {
@@ -147,7 +172,7 @@ var questions = [
     {
         type: 'input',
         name: 'useage',
-        message: '(7) Explain how to use the site or application once installed:',
+        message: '(8) Explain how to use the site or application once installed:',
         validate: useageInput => {
           if (useageInput) {
             return true;
@@ -158,9 +183,23 @@ var questions = [
         }
     },
     {
+      type: 'input',
+      name: 'credit',
+      message: '(9) Identify who contributed to this project:',
+      default: "Bradley Boyd",
+      validate: creditInput => {
+        if (creditInput) {
+          return true;
+        } else {
+          console.log('Please identify contributors to the project!');
+          return false;
+        }
+      }
+    },
+    {
         type: 'input',
         name: 'test',
-        message: "(8) What command should be used to run tests?",
+        message: "(10) What command should be used to run tests?",
         default: "npm test",
         validate: testInput => {
           if (testInput) {
@@ -172,24 +211,24 @@ var questions = [
         } 
     },
     {
-        type: 'input',
-        name: 'credit',
-        message: '(9) Identify who contributed to this project:',
-        default: "Bradley Boyd",
-        validate: creditInput => {
-          if (creditInput) {
-            return true;
-          } else {
-            console.log('Please identify contributors to the project!');
-            return false;
-          }
+      type: 'input',
+      name: 'questions',
+      message: "(11) What email address should questions be sent to?",
+      default: "bradley.boyd@gmail.com",
+      validate: questionsInput => {
+        if (questionsInput) {
+          return true;
+        } else {
+          console.log('Please enter email address for any questions!');
+          return false;
         }
+      } 
     },
     {
         type: 'checkbox',
         name: 'license',
-        message: '(10) What type of license applies your project? (Check all that apply)',
-        choices: ['Apache 2.0 License', 'Boost Software License 1.0', 'Eclipse Public License 1.0', 'GNU GPL v3', 'MIT License', 'Mozilla Public License 2.0'],
+        message: '(12) What type of license applies your project? (Check all that apply)',
+        choices: ['Apache 2.0 License', 'Boost Software License 1.0', 'Eclipse Public License 1.0', 'GNU GPL v3', 'MIT License', 'Mozilla Public License 2.0', 'Not Applicable'],
     },
 ];
 
@@ -199,9 +238,9 @@ inquirer
     .prompt (questions)
     .then (answers => {
 
-        const { username, email, description, installation, dependencies, useage, test, credit, license } = answers;
+        const { username, repo, email, description, installation, dependencies, useage, credit, test, questions, license } = answers;
 
-        const template = createReadMe(username, email, description, installation, dependencies, useage, test, credit, license);
+        const template = createReadMe(username, repo, email, description, installation, dependencies, useage, credit, test, questions, license);
 
         // --- Function to write README file --- //
         fs.writeFile('README.md', template,
