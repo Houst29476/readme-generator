@@ -15,7 +15,7 @@ https://user-images.githubusercontent.com/95327275/155551672-95067b3c-4470-40a8-
 Table of Contents
 =================
 
-* [GitHub Profile](#GitHub Profile)
+* [GitHub Profile](#GitHub-Profile)
 * [Project Repository URL](#repo)
 * [Email Adress](#email)
 * [Description](#description)

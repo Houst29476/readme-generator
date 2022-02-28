@@ -9,25 +9,32 @@ https://user-images.githubusercontent.com/95327275/155551672-95067b3c-4470-40a8-
 Table of Contents
 =================
 
+* [GitHub Profile](#GitHub Profile)
+* [Project Repository URL](#repo)
+* [Email Adress](#email)
 * [Description](#description)
 * [Installation](#installation)
 * [Dependencies](#dependencies)
 * [Useage](#useage)
 * [Credit](#credit)
 * [Test](#test)
+* [Questions](#Questions)
 * [License](#license)
 
 ## GitHub Profile:
 
 https://github.com/Houst29476
 
+## Project Repository URL:
+https:github.com/Houst29476/readme-generator
+
 ## Email Address:
 
-bradley.boyd@gmail.com
+Bradley.Boyd@gmail.com
 
 ## Description :
 
-This application builds a README file based off the answers to questions regarding a specific project
+This application generates a README file based off the answers of questions regarding the project
 
 ## Installation :
 
@@ -39,7 +46,7 @@ npm i
 
 ## Useage :
 
-once the code is cloned to your machine and the dependencies are installed, run the application and answer all of the questions. A README file will be generated.
+once the code is cloned to your machine and dependencies are installed, run the application (node index.js) and answer all of the questions. A README file will be produced at the end.
 
 ## Credit :
 
@@ -48,6 +55,10 @@ Bradley Boyd
 ## Test :
 
 npm test
+
+## Questions :
+
+Bradley.Boyd@gmail.com
 
 ## License :
 
