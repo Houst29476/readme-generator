@@ -3,7 +3,7 @@ const fs = require('fs');
 
 // ----- Table of Contents ----- //
 
-let createReadMe = (username, repo, email, description, installation, dependencies, useage, credit, test, questions, license) => {
+const createReadMe = (username, repo, email, description, installation, dependencies, useage, credit, test, questions, license) => {
     return `
 
 ![GitHub license](https://img.shields.io/badge/MIT-license-orange)

@@ -9,7 +9,7 @@ https://user-images.githubusercontent.com/95327275/155551672-95067b3c-4470-40a8-
 Table of Contents
 =================
 
-* [GitHub Profile](#GitHub Profile)
+* [GitHub Profile](#GitHub-Profile)
 * [Project Repository URL](#repo)
 * [Email Adress](#email)
 * [Description](#description)
@@ -26,11 +26,11 @@ Table of Contents
 https://github.com/Houst29476
 
 ## Project Repository URL:
-https:github.com/Houst29476/readme-generator
+https://github.com/Houst29476/readme-generator
 
 ## Email Address:
 
-Bradley.Boyd@gmail.com
+bradley.boyd@gmail.com
 
 ## Description :
 
@@ -58,7 +58,7 @@ npm test
 
 ## Questions :
 
-Bradley.Boyd@gmail.com
+bradley.boyd@gmailcom
 
 ## License :
 
